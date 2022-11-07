@@ -363,21 +363,21 @@ endsnippet
 
 
 snippet sec "Section" b
-\\section\{${1:Section Title}\}
+\\section\{${1:Section Title}\}\\label\{${2:Label}\}
 
 $0
 endsnippet
 
 
 snippet subsec "Subsection" b
-\\subsection\{${1:Subsection Title}\}
+\\subsection\{${1:Subsection Title}\}\\label\{${2:Label}\}
 
 $0
 endsnippet
 
 
 snippet subsubsec "subsubsection" b
-\\subsubsection\{${1:Subsubsection Title}\}
+\\subsubsection\{${1:Subsubsection Title}\}\\label\{${2:Label}\}
 
 $0
 endsnippet
@@ -444,10 +444,10 @@ endsnippet
 
 
 snippet \cite "\cite{}" iA
-\\cite\{$1\}$0
+(\\cite\{$1\})$0
 endsnippet
 
 
 snippet \year "\citeyear{}" iA
-\\citeyear\{$1\}$0
+(\\citeyear\{$1\})$0
 endsnippet
