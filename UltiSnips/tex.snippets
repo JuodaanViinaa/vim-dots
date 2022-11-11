@@ -77,7 +77,7 @@ endsnippet
 
 snippet mk "Inline Math" wA
 $${1}$`!p
-if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ':']:
+if t[2] and t[2][0] not in [',', '.', '?', '-', ' ', ':', ';']:
     snip.rv = ' '
 else:
     snip.rv = ''
@@ -187,12 +187,12 @@ snippet ^ "Superíndice" iA
 endsnippet
 
 
-snippet sup "text super script" i
+snippet supsc "text super script" i
 \\textsuperscript\{$1\}$0
 endsnippet
 
 
-snippet sub "text sub script" i
+snippet subsc "text sub script" i
 \\textsubscript\{$1\}$0
 endsnippet
 
@@ -301,7 +301,7 @@ snippet \hat "\hat{ }" wA
 endsnippet
 
 
-snippet \eqn "\begin{eqnarray*}" bA
+snippet \eqnar "\begin{eqnarray*}" bA
 \\begin{eqnarray*}
 	$1
 \\end{eqnarray*}
@@ -309,7 +309,7 @@ $0
 endsnippet
 
 
-snippet \veqn "\begin{eqnarray*}" bA
+snippet \veqnar "\begin{eqnarray*}" bA
 \\begin{eqnarray*}
 	${VISUAL}
 \\end{eqnarray*}
@@ -317,7 +317,7 @@ $0
 endsnippet
 
 
-snippet equation "\begin{equation}" bA
+snippet \equation "\begin{equation}" bA
 \\begin{equation}\label{$1}
 	$2
 \\end{equation}
