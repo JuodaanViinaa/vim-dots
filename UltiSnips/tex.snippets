@@ -64,7 +64,7 @@ snippet ´ "Comillas" i
 endsnippet
 
 
-snippet v´ "Comillas visuales" i
+snippet v" "Comillas visuales" i
 \`\`${VISUAL}''$0
 endsnippet
 
@@ -289,8 +289,19 @@ $0
 endsnippet
 
 
+snippet \vfigure "Figura" bA
+\\begin{figure}[!ht]
+	\\begin{center}
+	  ${VISUAL}
+		\\caption{$3}
+	\\end{center}
+\\end{figure}
+$0
+endsnippet
+
+
 context math()
-snippet \bar "\bar{ }" wA
+snippet \bar "\bar{ }" iA
 \\bar{$1}$0
 endsnippet
 
@@ -321,6 +332,14 @@ snippet \equation "\begin{equation}" bA
 \\begin{equation}\label{$1}
 	$2
 \\end{equation}
+$0
+endsnippet
+
+
+snippet \vitemize "\begin{itemize}" bA
+\\begin{itemize}
+	\\item ${VISUAL}$1
+\\end{itemize}
 $0
 endsnippet
 
@@ -384,7 +403,7 @@ endsnippet
 
 
 context math()
-snippet mbox "\mbox"
+snippet mbox "\mbox" i
 \\mbox\{$1\}$0
 endsnippet
 
@@ -450,4 +469,18 @@ endsnippet
 
 snippet \year "\citeyear{}" iA
 (\\citeyear\{$1\})$0
+endsnippet
+
+
+snippet \tabular "\begin{tabular}" bA
+\\begin{tabular}{$1}
+	$2
+\\end{tabular}
+endsnippet
+
+
+snippet \tikz "begin{tikzpicture}" bA
+\\begin{tikzpicture}
+  $1
+\end{tikzpicture}$0
 endsnippet
